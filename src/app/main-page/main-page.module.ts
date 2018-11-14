@@ -9,6 +9,7 @@ import { AbilitiesComponent } from './abilities/abilities.component';
 import { SkillComponent } from './abilities/skill/skill.component';
 import { FeatureProjectsComponent } from './feature-projects/feature-projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { HistoryComponent } from './experiences/history/history.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { ContactComponent } from './contact/contact.component';
         SkillComponent,
         FeatureProjectsComponent,
         ContactComponent,
+        HistoryComponent,
     ],
     imports: [
         CommonModule,
