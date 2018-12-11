@@ -6,13 +6,8 @@ import { History } from './history.model'
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.scss']
 })
-export class HistoryComponent implements OnInit {
+export class HistoryComponent {
 
   @Input('history') history: History;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

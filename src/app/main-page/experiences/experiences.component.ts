@@ -15,7 +15,6 @@ export class ExperiencesComponent implements OnInit {
         location: 'University Of Arkansas',
         dateOfAttendance: 'May 2015',
         position: 'Bachelor of Science - Computer Science',
-        // tslint:disable-next-line:max-line-length
         description: 'For my capstone project, I designed and implemented an automated smart home with proximity activated lights, a stock keeping refrigerator, and a smart stove top.'
       }
     ]
@@ -34,7 +33,6 @@ export class ExperiencesComponent implements OnInit {
         location: 'The Boeing Company',
         dateOfAttendance: 'December 2015 - Current',
         position: 'Programmer/Analyst',
-        // tslint:disable-next-line:max-line-length
         description: 'Currently, I\'m creating Boeing internal applications using Angular, Spring framework, and MySql, all deployed to Pivatol Cloud Foundry.'
       }
     ]
