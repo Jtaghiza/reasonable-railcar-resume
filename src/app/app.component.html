@@ -1,5 +1,5 @@
 <div class="container">
-    <button class="rp-nav-main-button" #navmain mat-fab (click)="toggleNav()" (blur)="toggleNav()">
+    <button class="rp-nav-main-button" #navmain mat-fab (click)="toggleNav()" (blur)="closeNav()">
         <mat-icon>menu</mat-icon>
     </button>
     <button matTooltip="Home" class="rp-nav-button"  mat-mini-fab [@navState]="{value: navState, params: {waitTime: 0, posX: 70, posY: 0}}">
