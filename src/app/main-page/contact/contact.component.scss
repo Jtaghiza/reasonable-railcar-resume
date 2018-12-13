@@ -21,3 +21,11 @@ img {
     width: 24px;
     height: 24px;
 }
+
+.rp-email {
+  color: mat-color($resume-color-primary, 50);
+}
+
+.rp-phone {
+  color: mat-color($resume-color-primary, A700);
+}
