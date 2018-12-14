@@ -1,0 +1,11 @@
+<form (submit)="doSomething()">
+  <mat-form-field >
+    <input matInput placeholder="Name">
+  </mat-form-field>
+
+  <mat-form-field >
+    <textarea  matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+  <button (click)="doSomething()"  mat-button color="accent">Submit</button>
+  <button (click)="doSomething()" mat-button>Close</button>
+</form>

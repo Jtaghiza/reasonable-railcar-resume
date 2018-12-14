@@ -1,0 +1,11 @@
+<div class="padding">
+  <rp-section-header title="Recommendations">What the people are saying</rp-section-header>
+  <div #content class="comments-containter">
+    <rp-comment *ngFor="let comment of comments" [screenHeight]="content.offsetHeight" [screenWidth]="content.offsetWidth"></rp-comment>
+  </div>
+  <div fxlayout="row" fxLayoutAlign="center center">
+    <button (click)="openDialog()" mat-raised-button>
+      Leave a note!
+    </button>
+  </div>
+</div>
