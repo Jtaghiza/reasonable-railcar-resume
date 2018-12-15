@@ -1,3 +1,9 @@
+@import '../../../resume-theme';
+
 .comments-containter {
   height: 300px;
+}
+
+.edit-icon {
+  color: mat-color($resume-color-primary, 50);
 }

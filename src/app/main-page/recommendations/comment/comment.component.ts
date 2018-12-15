@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {animate, keyframes, style, transition, trigger} from '@angular/animations';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'rp-comment',
@@ -8,9 +9,11 @@ import {animate, keyframes, style, transition, trigger} from '@angular/animation
   animations: [
     trigger('fade', [
       transition('false => true',
-        animate('3s', keyframes([
+        animate('5s', keyframes([
           style({opacity: '0', offset: 0}),
+          style({opacity: '1', offset: 0.25}),
           style({opacity: '1', offset: 0.5}),
+          style({opacity: '1', offset: 0.75}),
           style({opacity: '0', offset: 1}),
         ])))
     ])
@@ -27,16 +30,23 @@ export class CommentComponent implements OnInit {
   state = false;
   notFirstOnDone = 0;
 
-  comments = [
-    {name: 'Jeremy', comment: 'This guys is great'},
-    {name: 'Jeremy2', comment: 'This guys is awesome'},
-    {name: 'Jeremy3', comment: '10/10'}
+  comments: {name: string, comment: string}[]  = [
+    {name: '', comment: ''},
   ];
 
-  randomEntry: {name: string, comment: string} = this.comments[0];
+  randomEntry: { name: string, comment: string } = this.comments[0];
+
+  constructor(private db: AngularFirestore) {
+  }
 
   ngOnInit(): void {
     const timeout = Math.random() * 10000;
+
+    this.db.collection('comments').valueChanges().subscribe(
+      (data) => {
+        this.comments = data as {name: string, comment: string}[];
+      }
+    )
 
     setTimeout(() => {
       this.state = true;

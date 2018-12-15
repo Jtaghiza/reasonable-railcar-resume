@@ -1,11 +1,18 @@
 <div class="padding">
   <rp-section-header title="Recommendations">What the people are saying</rp-section-header>
-  <div #content class="comments-containter">
-    <rp-comment *ngFor="let comment of comments" [screenHeight]="content.offsetHeight" [screenWidth]="content.offsetWidth"></rp-comment>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="40" fxLayout="row" fxLayout.lt-md="column">
+      <div fxFlex="50" #content class="comments-containter">
+        <rp-comment [screenHeight]="content.offsetHeight" [screenWidth]="content.offsetWidth"></rp-comment>
+      </div>
+      <div fxFlex="50" #content2 class="comments-containter">
+        <rp-comment [screenHeight]="content2.offsetHeight" [screenWidth]="content2.offsetWidth"></rp-comment>
+      </div>
+    </div>
   </div>
   <div fxlayout="row" fxLayoutAlign="center center">
-    <button (click)="openDialog()" mat-raised-button>
-      Leave a note!
+    <button matTooltip="Leave me a note!" (click)="openDialog()" mat-fab>
+      <mat-icon  class="edit-icon">edit</mat-icon>
     </button>
   </div>
 </div>

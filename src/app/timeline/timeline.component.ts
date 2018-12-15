@@ -20,8 +20,4 @@ test: string[] = ['rem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   ngOnInit() {
   }
 
-
-  log(test) {
-    console.log(test);
-  }
 }

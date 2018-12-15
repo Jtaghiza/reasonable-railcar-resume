@@ -21,7 +21,6 @@ import {SubmitCommentDialogComponent} from './submit-comment-dialog/submit-comme
 
 export class RecommendationsComponent {
 
-  comments = [1, 2, 3, 4];
 
   constructor(public  dialog: MatDialog) {}
 

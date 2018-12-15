@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -19,7 +22,9 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

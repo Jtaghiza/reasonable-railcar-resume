@@ -1,11 +1,14 @@
-<form (submit)="doSomething()">
+<form #newEntryForm="ngForm" (submit)="submitComment()">
   <mat-form-field >
-    <input matInput placeholder="Name">
+    <input required name="name" [(ngModel)]="newEntry.name" matInput placeholder="Name" maxlength="50" >
   </mat-form-field>
 
   <mat-form-field >
-    <textarea  matInput placeholder="Leave a comment"></textarea>
+    <textarea required name="comment" [(ngModel)]="newEntry.comment" matInput placeholder="Leave a comment" maxlength="50" ></textarea>
   </mat-form-field>
-  <button (click)="doSomething()"  mat-button color="accent">Submit</button>
-  <button (click)="doSomething()" mat-button>Close</button>
+  <button type="submit" mat-button color="accent" [disabled]="!newEntryForm.form.valid">Submit</button>
+  <button (click)="closeDialog()" mat-button>Close</button>
 </form>
+
+
+

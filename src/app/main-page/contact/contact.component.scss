@@ -1,9 +1,5 @@
 @import '../../../resume-theme';
 
-.rp-section-title {
-    color: mat-color($resume-color-primary, 50);
-}
-
 .rp-section-quote {
     color: mat-color($resume-color-primary, 50);    
 }
@@ -27,5 +23,5 @@ img {
 }
 
 .rp-phone {
-  color: mat-color($resume-color-primary, A700);
+  color: mat-color($resume-color-primary, 50);
 }
