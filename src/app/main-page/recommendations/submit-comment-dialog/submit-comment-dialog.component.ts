@@ -18,7 +18,8 @@ export class SubmitCommentDialogComponent  {
 
 
   submitComment() {
-    this.db.collection('under-review').add({name: 'jeremy', comment: 'my comment about you'});
+    this.db.collection('under-review').add({name: this.newEntry.name, comment: this.newEntry.comment});
+    this.closeDialog();
   }
 
   closeDialog() {
