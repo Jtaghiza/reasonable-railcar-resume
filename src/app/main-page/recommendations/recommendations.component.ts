@@ -7,16 +7,6 @@ import {SubmitCommentDialogComponent} from './submit-comment-dialog/submit-comme
   selector: 'rp-recommendations',
   templateUrl: './recommendations.component.html',
   styleUrls: ['./recommendations.component.scss'],
-  animations: [
-    trigger('fade', [
-      transition('* <=> *',
-        animate('1s', keyframes([
-          style({opacity: '0', offset: 0}),
-          style({opacity: '1', offset: 0.5}),
-          style({opacity: '0', offset: 1}),
-        ])))
-    ])
-  ]
 })
 
 export class RecommendationsComponent {
