@@ -8,7 +8,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
   styleUrls: ['./comment.component.scss'],
   animations: [
     trigger('fade', [
-      transition('false => true',
+      transition('* => *',
         animate('5s', keyframes([
           style({opacity: '0', offset: 0}),
           style({opacity: '1', offset: 0.25}),
