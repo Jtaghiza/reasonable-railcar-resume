@@ -1,0 +1,41 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <h1>Under Review</h1>
+</div>
+
+<mat-list fxLayout="column" fxLayoutAlign="center center">
+  <mat-list-item fxLayout="row" *ngFor="let underReviewItem of underReviewitems | async; let i = index">
+    <div class="comment-text"> {{ underReviewItem.comment }} <b>{{ underReviewItem.name }}</b></div>
+
+    <button (click)="addToApproved(underReviewItem, i)" mat-button>
+      <mat-icon>check</mat-icon>
+    </button>
+    <button (click)="removeFromList(i)" mat-button color="warn">
+      <mat-icon>cancel</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
+
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <h1>Prod Comments</h1>
+</div>
+
+<mat-list fxLayout="column" fxLayoutAlign="center center">
+  <mat-list-item fxLayout="row" *ngFor="let prodItem of prodComments | async; let i = index">
+    <div class="comment-text">
+      <mat-form-field class="comment-text">
+        <input matInput [(ngModel)]="prodItem.comment" >
+      </mat-form-field>
+      <b>{{ prodItem.name }}</b>
+    </div>
+
+    <button (click)="editProd(prodItem, i)" mat-button>
+      <mat-icon>check</mat-icon>
+    </button>
+    <button (click)="deleteFromProd(i)" mat-button color="warn">
+      <mat-icon>cancel</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

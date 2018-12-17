@@ -64,3 +64,11 @@ app-root {
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 300;
 }
+
+.hide-mat-dialog-container {
+  mat-dialog-container{
+    background:none !important;
+    box-shadow:none !important;
+    padding: 0;
+  }
+}
