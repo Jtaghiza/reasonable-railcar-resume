@@ -14,6 +14,11 @@
   </mat-card-content>
 </mat-card>
 <div fxLayout="row" fxLayoutAlign="center center">
-  <mat-spinner color="accent" *ngIf="hasSubmit"></mat-spinner>
+  <mat-spinner color="accent" *ngIf="hasSubmit && !hasReturned"></mat-spinner>
 </div>
-<!--mat-car-->
+<mat-card *ngIf="hasReturned">
+  <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+    Thanks for your feedback!
+    <button mat-button color="accent" (click)="closeDialog()">Close</button>
+  </mat-card-content>
+</mat-card>

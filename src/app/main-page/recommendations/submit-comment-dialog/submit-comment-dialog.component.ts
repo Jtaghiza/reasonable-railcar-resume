@@ -12,6 +12,7 @@ export class SubmitCommentDialogComponent  {
 
   newEntry: {name: string, comment: string} = {name: '', comment: ''};
   hasSubmit = false;
+  hasReturned;
 
 
   constructor(public dialogRef: MatDialogRef<SubmitCommentDialogComponent>,
@@ -19,7 +20,8 @@ export class SubmitCommentDialogComponent  {
 
 
   submitComment() {
-    this.db.collection('under-review').add({name: this.newEntry.name, comment: this.newEntry.comment});
+    this.db.collection('under-review').add({name: this.newEntry.name, comment: this.newEntry.comment})
+      .then((d) => this.hasReturned = d ? true : false);
     this.hasSubmit = true;
   }
 
