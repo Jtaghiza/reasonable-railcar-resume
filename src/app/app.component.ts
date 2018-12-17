@@ -45,4 +45,8 @@ export class AppComponent {
   openNav() {
     this.navState = true;
   }
+
+  onBlur() {
+    setTimeout(() => this.closeNav(), 50);
+  }
 }

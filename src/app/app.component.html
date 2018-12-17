@@ -1,8 +1,8 @@
 <div class="container">
-    <button class="rp-nav-main-button" #navmain mat-fab (click)="toggleNav()" (blur)="closeNav()">
+    <button class="rp-nav-main-button" #navmain mat-fab (click)="toggleNav()" (blur)="onBlur()">
         <mat-icon>menu</mat-icon>
     </button>
-    <button matTooltip="Home" class="rp-nav-button"  mat-mini-fab [@navState]="{value: navState, params: {waitTime: 0, posX: 70, posY: 0}}">
+    <button matTooltip="Home" class="rp-nav-button" routerLink="/" mat-mini-fab [@navState]="{value: navState, params: {waitTime: 0, posX: 70, posY: 0}}">
         <mat-icon>home</mat-icon>
     </button>
     <a fxLayout="row" fxLayoutAlign="center center" matTooltip="Github" href="https://github.com/Jtaghiza/" target="_blank" class="rp-nav-button" (click)="toggleNav()" mat-mini-fab [@navState]="{value: navState, params: {waitTime: 200, posX: 50, posY: 50}}">

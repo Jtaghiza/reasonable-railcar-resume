@@ -1,7 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'rp-submit-comment-dialog',
@@ -17,7 +16,6 @@ export class SubmitCommentDialogComponent  {
 
   constructor(public dialogRef: MatDialogRef<SubmitCommentDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: string, private db: AngularFirestore) { }
-
 
   submitComment() {
     this.db.collection('under-review').add({name: this.newEntry.name, comment: this.newEntry.comment})
