@@ -1,14 +1,19 @@
-<form #newEntryForm="ngForm" (submit)="submitComment()">
-  <mat-form-field >
-    <input required name="name" [(ngModel)]="newEntry.name" matInput placeholder="Name" maxlength="50" >
-  </mat-form-field>
+<mat-card *ngIf="!hasSubmit">
+  <mat-card-content>
+    <form   #newEntryForm="ngForm" (submit)="submitComment()">
+      <mat-form-field >
+        <input required name="name" [(ngModel)]="newEntry.name" matInput placeholder="Name" maxlength="50" >
+      </mat-form-field>
 
-  <mat-form-field >
-    <textarea required name="comment" [(ngModel)]="newEntry.comment" matInput placeholder="Leave a comment" maxlength="50" ></textarea>
-  </mat-form-field>
-  <button type="submit" mat-button color="accent" [disabled]="!newEntryForm.form.valid">Submit</button>
-  <button (click)="closeDialog()" mat-button>Close</button>
-</form>
-
-
-
+      <mat-form-field>
+        <textarea required name="comment" [(ngModel)]="newEntry.comment" matInput placeholder="Leave a comment" maxlength="50" ></textarea>
+      </mat-form-field>
+      <button type="submit" mat-button color="accent" [disabled]="!newEntryForm.form.valid">Submit</button>
+      <button (click)="closeDialog()" mat-button>Close</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-spinner color="accent" *ngIf="hasSubmit"></mat-spinner>
+</div>
+<!--mat-car-->

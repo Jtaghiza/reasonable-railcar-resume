@@ -17,10 +17,9 @@ export class RecommendationsComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(SubmitCommentDialogComponent, {
       width: '250px',
+      height: '300px',
+      panelClass: 'hide-mat-dialog-container'
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
   }
 }

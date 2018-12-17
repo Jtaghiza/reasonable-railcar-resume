@@ -11,19 +11,21 @@ import {Observable} from 'rxjs';
 export class SubmitCommentDialogComponent  {
 
   newEntry: {name: string, comment: string} = {name: '', comment: ''};
+  hasSubmit = false;
 
-  items: Observable<any[]>;
+
   constructor(public dialogRef: MatDialogRef<SubmitCommentDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: string, private db: AngularFirestore) { }
 
 
   submitComment() {
     this.db.collection('under-review').add({name: this.newEntry.name, comment: this.newEntry.comment});
-    this.closeDialog();
+    this.hasSubmit = true;
   }
 
   closeDialog() {
     this.dialogRef.close();
+    this.hasSubmit = false;
   }
 
 

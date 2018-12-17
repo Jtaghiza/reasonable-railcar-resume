@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AdminModule} from './admin/admin.module';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 
 @NgModule({
@@ -20,9 +22,11 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
+    AdminModule,
     SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

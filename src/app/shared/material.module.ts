@@ -12,6 +12,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -29,7 +31,9 @@ import {MatInputModule} from '@angular/material/input';
     MatSidenavModule,
     MatTooltipModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
 })
