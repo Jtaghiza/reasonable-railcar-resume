@@ -47,6 +47,6 @@ export class AppComponent {
   }
 
   onBlur() {
-    setTimeout(() => this.closeNav(), 50);
+    setTimeout(() => this.closeNav(), 300);
   }
 }
