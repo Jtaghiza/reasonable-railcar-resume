@@ -25,25 +25,4 @@ hr {
     }
 }
 
-.rp-exp-content {
-    font-size: 17px;
-    font-family: 'Roboto Mono', sans-serif;
-    color: mat-color($resume-color-primary, 50);
-    font-weight: 500;
-    line-height: 2em;
-    margin-top: 20px;
-
-    div:nth-child(1) { 
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 2em;
-        width: 100%
-    }
-    div:nth-child(2) { 
-        font-size: 15px;
-        line-height: 1.5em;
-        font-weight: 300;
-    }
-}
-
 

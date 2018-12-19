@@ -1,26 +1,19 @@
-<!-- header -->
-<div fxLayout.gt-md="row" fxLayout="column" fxLayoutAlign.lt-lg="center center">
-  <div fxFlex="30"></div>
-  <div fxFlex class="rp-section-subtitle">{{ history.sectionTitle }}</div>
+<div fxLayout="row" fxLayoutAlign.lt-md="center center">
+  <div class="rp-section-subtitle">{{ history.sectionTitle }}</div>
 </div>
-<!-- header -->
-
-<!-- content -->
-<div *ngFor="let location of history.locations" fxLayout.gt-md="row" fxLayout="column" fxLayoutAlign.lt-lg="center center" ngStyle.xs="height: 172px">
-  <div fxFlex="30"></div>
-  <div fxFlex="15" class="rp-exp-title" fxLayout="column" fxLayoutAlign.lt-lg="center center" fxLayoutAlign="start start"
-    ngStyle.lt-lg="width: 100vw">
+<div *ngFor="let location of history.locations"
+     ngStyle.xs="height: 172px"
+     fxLayout.lt-md="column"
+     fxLayoutAlign.lt-md="center center">
+  <div fxFlex="30" class="rp-exp-title" fxLayout="column">
     <h2>{{ location.location }}</h2>
-    <p>{{ location.dateOfAttendance }}</p>
+    <p fxFlexAlign.lt-md="center">{{ location.dateOfAttendance }}</p>
   </div>
-  <div fxFlex="2"></div>
-  <div ngStyle.lt-lg="width: 500px; text-align: center;" ngStyle.xs="width: 300px; text-align: center;" fxFlex.lt-lg="15"
-    class="rp-exp-content" fxLayout="column" fxLayoutAlign="start start">
+  <div class="rp-exp-content" fxLayout="column" ngStyle.lt-md="text-align: center" >
     <div>{{ location.position }}</div>
-    <div fxHide.xs="true">
+    <div fxHide.xs="true" ngStyle.lt-md="max-width: 500px">
       {{ location.description }}
     </div>
   </div>
-  <div fxFlex="30"></div>
 </div>
-<!-- content -->
+
