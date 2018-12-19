@@ -34,14 +34,18 @@ hr {
     letter-spacing: normal;
 }
 
+.rp-profile-center-text {
+  text-align: center !important;
+}
+
 b {
-    color: mat-color($resume-color-primary, 400);
-    font-family: 'Roboto Mono', sans-serif;
-    font-weight: bold;
-    line-height: 1.6em;
+  color: mat-color($resume-color-primary, 400);
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: bold;
+  line-height: 1.6em;
 }
 
 img {
-    width: 240px; 
-    height: 240px;
+  width: 240px;
+  height: 240px;
 }
