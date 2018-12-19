@@ -9,7 +9,6 @@ hr {
     margin-bottom: 30px;
 }
 
-
 .rp-ab-width {
     width: 35%
 }
@@ -29,4 +28,9 @@ hr {
 rp-skill {
     font-family: 'Roboto Mono', monospace;
     color: mat-color($resume-color-primary, 500);
+}
+
+
+.rp-section-content-container{
+  max-width: 800px;
 }
