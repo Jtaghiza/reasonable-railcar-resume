@@ -6,6 +6,8 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import {MatBottomSheet} from '@angular/material';
+import {DownloadSheetComponent} from './download-sheet/download-sheet.component';
 
 @Component({
   selector: 'rp-root',
@@ -29,9 +31,13 @@ import {
   ]
 })
 export class AppComponent {
+
   navState = false
 
-  constructor() {
+  constructor(private bottomSheet: MatBottomSheet) {}
+
+  openBottomSheet(): void {
+    this.bottomSheet.open(DownloadSheetComponent);
   }
 
   toggleNav() {

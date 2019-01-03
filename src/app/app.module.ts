@@ -11,11 +11,13 @@ import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AdminModule} from './admin/admin.module';
 import {AngularFireAuthModule} from '@angular/fire/auth';
+import { DownloadSheetComponent } from './download-sheet/download-sheet.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    DownloadSheetComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,9 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
     AngularFireAuthModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    DownloadSheetComponent
+  ],
 })
 export class AppModule { }

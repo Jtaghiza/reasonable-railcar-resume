@@ -1,15 +1,24 @@
 <div class="container">
-    <button class="rp-nav-main-button" #navmain mat-fab (click)="toggleNav()" (blur)="onBlur()">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <button matTooltip="Home" class="rp-nav-button" routerLink="/" mat-mini-fab [@navState]="{value: navState, params: {waitTime: 0, posX: 70, posY: 0}}">
-        <mat-icon>home</mat-icon>
-    </button>
-    <a fxLayout="row" fxLayoutAlign="center center" matTooltip="Github" href="https://github.com/Jtaghiza/" target="_blank" class="rp-nav-button" (click)="toggleNav()" mat-mini-fab [@navState]="{value: navState, params: {waitTime: 200, posX: 50, posY: 50}}">
-        <img style="width: 24px; height: 24px;" src="../assets/GitHub-Mark-Light-120px-plus.png" alt="">
-    </a>
-    <a matTooltip="Download my resume" href="assets/jeremy-2018-resume.pdf" class="rp-nav-button" (click)="toggleNav()" download  mat-mini-fab [@navState]="{value: navState, params: {waitTime: 300, posX: 0, posY: 70}}">
-        <mat-icon>file_copy</mat-icon>
-    </a>
-    <router-outlet></router-outlet>
+  <button class="rp-nav-main-button" #navmain mat-fab (click)="toggleNav()" (blur)="onBlur()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <button matTooltip="Home" class="rp-nav-button" routerLink="/" mat-mini-fab
+          [@navState]="{value: navState, params: {waitTime: 0, posX: 70, posY: 0}}">
+    <mat-icon>home</mat-icon>
+  </button>
+  <a fxLayout="row"
+     fxLayoutAlign="center center"
+     matTooltip="Github"
+     href="https://github.com/Jtaghiza/"
+     target="_blank" class="rp-nav-button"
+     mat-mini-fab [@navState]="{value: navState, params: {waitTime: 200, posX: 50, posY: 50}}">
+    <img style="width: 24px; height: 24px;" src="../assets/GitHub-Mark-Light-120px-plus.png" alt="">
+  </a>
+  <a matTooltip="Download my resume"
+     class="rp-nav-button" (click)="openBottomSheet()"
+     mat-mini-fab
+     [@navState]="{value: navState, params: {waitTime: 300, posX: 0, posY: 70}}">
+    <mat-icon>file_copy</mat-icon>
+  </a>
+  <router-outlet></router-outlet>
 </div>
